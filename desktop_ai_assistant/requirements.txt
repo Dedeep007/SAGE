@@ -1,0 +1,45 @@
+# Core dependencies
+PySide6
+flet
+
+# AI and LangChain
+langchain
+langchain-groq
+groq
+
+# Voice processing
+SpeechRecognition
+pyttsx3
+gTTS
+pygame
+pyaudio
+
+# Screen capture and OCR
+Pillow
+keras-ocr
+mss
+opencv-python
+tensorflow==2.12.0
+keras==2.12.0
+numpy<2.0
+imgaug
+
+# System integration
+pynput
+psutil
+
+# Database and storage
+aiosqlite
+
+# Utilities
+python-dotenv
+requests
+aiohttp
+asyncio-mqtt
+
+# Development and building
+pyinstaller
+cx-freeze
+
+# Logging and monitoring
+structlog

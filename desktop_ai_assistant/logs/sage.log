@@ -1,0 +1,950 @@
+2025-09-05 11:16:55,912 - root - INFO - Logging configured successfully
+2025-09-05 11:16:55,913 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 11:16:55,916 - __main__ - ERROR - Missing dependencies: PySide6, langchain-groq, SpeechRecognition, keras-ocr, mss
+2025-09-05 11:16:55,916 - __main__ - ERROR - Please install missing dependencies with: pip install -r requirements.txt
+2025-09-05 12:10:48,750 - root - INFO - Logging configured successfully
+2025-09-05 12:10:48,750 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 12:13:39,696 - root - INFO - Logging configured successfully
+2025-09-05 12:13:39,696 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 12:13:39,698 - __main__ - ERROR - Missing dependencies: PySide6, langchain-groq, SpeechRecognition, keras-ocr, mss
+2025-09-05 12:13:39,704 - __main__ - ERROR - Please install missing dependencies with: pip install -r requirements.txt
+2025-09-05 12:15:38,624 - root - INFO - Logging configured successfully
+2025-09-05 12:15:38,624 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 12:15:50,747 - __main__ - WARNING - GROQ_API_KEY not configured. Please set the GROQ_API_KEY environment variable or update config/settings.py
+2025-09-05 12:15:50,747 - __main__ - WARNING - Some features may not work without proper API key configuration
+2025-09-05 12:16:00,157 - tensorflow - WARNING - From C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\keras\src\backend\tensorflow\core.py:232: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2025-09-05 12:16:00,264 - __main__ - ERROR - KerasOCR not found or not accessible: Unrecognized keyword arguments passed to Dense: {'weights': [array([[0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.]], dtype=float32), array([1., 0., 0., 0., 1., 0.], dtype=float32)]}
+2025-09-05 12:16:00,264 - __main__ - ERROR - Please install KerasOCR with: pip install keras-ocr tensorflow
+2025-09-05 12:16:00,264 - __main__ - WARNING - Screen reading features will not work without KerasOCR
+2025-09-05 12:16:00,478 - __main__ - ERROR - Fatal error: cannot import name 'pyqtSignal' from 'PySide6.QtCore' (C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\PySide6\QtCore.pyd)
+Traceback (most recent call last):
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\main.py", line 96, in main
+    from src.ui import create_application
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ui.py", line 17, in <module>
+    from PySide6.QtCore import (
+ImportError: cannot import name 'pyqtSignal' from 'PySide6.QtCore' (C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\PySide6\QtCore.pyd)
+2025-09-05 12:17:52,491 - root - INFO - Logging configured successfully
+2025-09-05 12:17:52,491 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 12:17:52,493 - __main__ - ERROR - Missing dependencies: PySide6, langchain-groq, SpeechRecognition, keras-ocr, mss
+2025-09-05 12:17:52,494 - __main__ - ERROR - Please install missing dependencies with: pip install -r requirements.txt
+2025-09-05 12:18:06,391 - root - INFO - Logging configured successfully
+2025-09-05 12:18:06,391 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 12:18:10,951 - __main__ - WARNING - GROQ_API_KEY not configured. Please set the GROQ_API_KEY environment variable or update config/settings.py
+2025-09-05 12:18:10,951 - __main__ - WARNING - Some features may not work without proper API key configuration
+2025-09-05 12:18:12,292 - tensorflow - WARNING - From C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\keras\src\backend\tensorflow\core.py:232: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2025-09-05 12:18:12,382 - __main__ - ERROR - KerasOCR not found or not accessible: Unrecognized keyword arguments passed to Dense: {'weights': [array([[0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.]], dtype=float32), array([1., 0., 0., 0., 1., 0.], dtype=float32)]}
+2025-09-05 12:18:12,388 - __main__ - ERROR - Please install KerasOCR with: pip install keras-ocr tensorflow
+2025-09-05 12:18:12,389 - __main__ - WARNING - Screen reading features will not work without KerasOCR
+2025-09-05 12:18:14,958 - src.ai_agent - ERROR - Failed to initialize LLM: GROQ_API_KEY not properly configured
+2025-09-05 12:18:14,958 - __main__ - ERROR - Fatal error: GROQ_API_KEY not properly configured
+Traceback (most recent call last):
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\main.py", line 99, in main
+    app = create_application()
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ui.py", line 602, in create_application
+    app = SAGEApplication(sys.argv)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ui.py", line 592, in __init__
+    self.assistant = FloatingAssistant()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ui.py", line 181, in __init__
+    self.ai_agent = get_ai_agent()
+                    ^^^^^^^^^^^^^^
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ai_agent.py", line 267, in get_ai_agent
+    _ai_agent_instance = AIAgent()
+                         ^^^^^^^^^
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ai_agent.py", line 66, in __init__
+    self._initialize_llm()
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ai_agent.py", line 72, in _initialize_llm
+    raise ValueError("GROQ_API_KEY not properly configured")
+ValueError: GROQ_API_KEY not properly configured
+2025-09-05 14:13:59,899 - root - INFO - Logging configured successfully
+2025-09-05 14:13:59,899 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 14:14:32,194 - __main__ - WARNING - GROQ_API_KEY not configured. Please set the GROQ_API_KEY environment variable or update config/settings.py
+2025-09-05 14:14:32,194 - __main__ - WARNING - Some features may not work without proper API key configuration
+2025-09-05 14:14:34,902 - tensorflow - WARNING - From C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\keras\src\backend\tensorflow\core.py:232: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2025-09-05 14:14:35,037 - __main__ - ERROR - KerasOCR not found or not accessible: Unrecognized keyword arguments passed to Dense: {'weights': [array([[0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0., 0.]], dtype=float32), array([1., 0., 0., 0., 1., 0.], dtype=float32)]}
+2025-09-05 14:14:35,038 - __main__ - ERROR - Please install KerasOCR with: pip install keras-ocr tensorflow
+2025-09-05 14:14:35,039 - __main__ - WARNING - Screen reading features will not work without KerasOCR
+2025-09-05 14:14:37,592 - src.ai_agent - ERROR - Failed to initialize LLM: GROQ_API_KEY not properly configured
+2025-09-05 14:14:37,592 - __main__ - ERROR - Fatal error: GROQ_API_KEY not properly configured
+Traceback (most recent call last):
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\main.py", line 99, in main
+    app = create_application()
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ui.py", line 602, in create_application
+    app = SAGEApplication(sys.argv)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ui.py", line 592, in __init__
+    self.assistant = FloatingAssistant()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ui.py", line 181, in __init__
+    self.ai_agent = get_ai_agent()
+                    ^^^^^^^^^^^^^^
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ai_agent.py", line 267, in get_ai_agent
+    _ai_agent_instance = AIAgent()
+                         ^^^^^^^^^
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ai_agent.py", line 66, in __init__
+    self._initialize_llm()
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ai_agent.py", line 72, in _initialize_llm
+    raise ValueError("GROQ_API_KEY not properly configured")
+ValueError: GROQ_API_KEY not properly configured
+2025-09-05 14:30:34,542 - root - INFO - Logging configured successfully
+2025-09-05 14:30:34,542 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 14:31:05,201 - __main__ - WARNING - GROQ_API_KEY not configured. Please set the GROQ_API_KEY environment variable or update config/settings.py
+2025-09-05 14:31:05,201 - __main__ - WARNING - Some features may not work without proper API key configuration
+2025-09-05 14:31:18,261 - src.ai_agent - ERROR - Failed to initialize LLM: GROQ_API_KEY not properly configured
+2025-09-05 14:31:18,261 - __main__ - ERROR - Fatal error: GROQ_API_KEY not properly configured
+Traceback (most recent call last):
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\main.py", line 99, in main
+    app = create_application()
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ui.py", line 602, in create_application
+    app = SAGEApplication(sys.argv)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ui.py", line 592, in __init__
+    self.assistant = FloatingAssistant()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ui.py", line 181, in __init__
+    self.ai_agent = get_ai_agent()
+                    ^^^^^^^^^^^^^^
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ai_agent.py", line 267, in get_ai_agent
+    _ai_agent_instance = AIAgent()
+                         ^^^^^^^^^
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ai_agent.py", line 66, in __init__
+    self._initialize_llm()
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ai_agent.py", line 72, in _initialize_llm
+    raise ValueError("GROQ_API_KEY not properly configured")
+ValueError: GROQ_API_KEY not properly configured
+2025-09-05 14:42:43,799 - root - INFO - Logging configured successfully
+2025-09-05 14:42:43,799 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 14:42:50,789 - __main__ - WARNING - GROQ_API_KEY not configured. Please set the GROQ_API_KEY environment variable or update config/settings.py
+2025-09-05 14:42:50,789 - __main__ - WARNING - Some features may not work without proper API key configuration
+2025-09-05 14:42:54,131 - src.ai_agent - ERROR - Failed to initialize LLM: GROQ_API_KEY not properly configured
+2025-09-05 14:42:54,131 - __main__ - ERROR - Fatal error: GROQ_API_KEY not properly configured
+Traceback (most recent call last):
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\main.py", line 99, in main
+    app = create_application()
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ui.py", line 602, in create_application
+    app = SAGEApplication(sys.argv)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ui.py", line 592, in __init__
+    self.assistant = FloatingAssistant()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ui.py", line 181, in __init__
+    self.ai_agent = get_ai_agent()
+                    ^^^^^^^^^^^^^^
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ai_agent.py", line 267, in get_ai_agent
+    _ai_agent_instance = AIAgent()
+                         ^^^^^^^^^
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ai_agent.py", line 66, in __init__
+    self._initialize_llm()
+  File "C:\Users\dedeep vasireddy\.vscode\SAGE\desktop_ai_assistant\src\ai_agent.py", line 72, in _initialize_llm
+    raise ValueError("GROQ_API_KEY not properly configured")
+ValueError: GROQ_API_KEY not properly configured
+2025-09-05 14:44:31,305 - root - INFO - Logging configured successfully
+2025-09-05 14:44:31,309 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 14:44:42,239 - src.ai_agent - INFO - Initialized Groq LLM with model: llama-3.1-70b-versatile
+2025-09-05 14:44:44,356 - src.voice_processor - INFO - Microphone initialized successfully
+2025-09-05 14:44:44,464 - comtypes.client._code_cache - INFO - Could not import comtypes.gen, trying to create it.
+2025-09-05 14:44:44,466 - comtypes.client._code_cache - INFO - Created comtypes.gen directory: 'C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\comtypes\gen'
+2025-09-05 14:44:44,467 - comtypes.client._code_cache - INFO - Writing __init__.py file: 'C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\comtypes\gen\__init__.py'
+2025-09-05 14:44:44,487 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\comtypes\gen'
+2025-09-05 14:44:44,527 - comtypes.client._generate - INFO - Could not import comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4: No module named 'comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4'
+2025-09-05 14:44:44,615 - comtypes.client._generate - INFO - # Generating comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4
+2025-09-05 14:44:44,704 - comtypes.client._generate - INFO - # Generating comtypes.gen.SpeechLib
+2025-09-05 14:44:44,714 - comtypes.client._generate - INFO - Could not import comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0: No module named 'comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0'
+2025-09-05 14:44:44,715 - comtypes.client._generate - INFO - # Generating comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0
+2025-09-05 14:44:44,724 - comtypes.client._generate - INFO - # Generating comtypes.gen.stdole
+2025-09-05 14:44:45,677 - src.voice_processor - INFO - TTS engine initialized successfully
+2025-09-05 14:44:45,680 - src.screen_reader - INFO - Initializing KerasOCR pipeline...
+2025-09-05 14:44:48,240 - src.screen_reader - INFO - KerasOCR pipeline initialized successfully
+2025-09-05 14:44:48,297 - src.ui - INFO - Voice processing setup completed
+2025-09-05 14:44:48,300 - src.screen_reader - INFO - Screen monitoring started
+2025-09-05 14:44:48,301 - src.screen_reader - ERROR - Failed to capture screen: '_thread._local' object has no attribute 'srcdc'
+2025-09-05 14:44:48,302 - src.ui - INFO - Screen monitoring setup completed
+2025-09-05 14:44:48,303 - src.ui - INFO - Floating assistant UI initialized
+2025-09-05 14:44:53,319 - src.screen_reader - ERROR - Failed to capture screen: '_thread._local' object has no attribute 'srcdc'
+2025-09-05 14:44:53,320 - __main__ - INFO - SAGE Desktop AI Assistant started successfully
+2025-09-05 14:44:58,321 - src.screen_reader - ERROR - Failed to capture screen: '_thread._local' object has no attribute 'srcdc'
+2025-09-05 14:45:03,322 - src.screen_reader - ERROR - Failed to capture screen: '_thread._local' object has no attribute 'srcdc'
+2025-09-05 14:45:08,324 - src.screen_reader - ERROR - Failed to capture screen: '_thread._local' object has no attribute 'srcdc'
+2025-09-05 14:45:13,326 - src.screen_reader - ERROR - Failed to capture screen: '_thread._local' object has no attribute 'srcdc'
+2025-09-05 14:45:18,327 - src.screen_reader - ERROR - Failed to capture screen: '_thread._local' object has no attribute 'srcdc'
+2025-09-05 14:45:21,460 - src.screen_reader - INFO - Screen monitoring stopped
+2025-09-05 14:45:21,461 - src.voice_processor - INFO - Voice listening stopped
+2025-09-05 14:47:56,995 - root - INFO - Logging configured successfully
+2025-09-05 14:47:56,995 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 14:48:07,142 - src.ai_agent - INFO - Initialized Groq LLM with model: llama-3.1-70b-versatile
+2025-09-05 14:48:09,023 - src.voice_processor - INFO - Microphone initialized successfully
+2025-09-05 14:48:09,115 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\dedeep vasireddy\\.vscode\\SAGE\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-09-05 14:48:09,116 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\comtypes\gen'
+2025-09-05 14:48:09,281 - src.voice_processor - INFO - TTS engine initialized successfully
+2025-09-05 14:48:09,282 - src.screen_reader - INFO - Initializing KerasOCR pipeline...
+2025-09-05 14:48:11,727 - src.screen_reader - INFO - KerasOCR pipeline initialized successfully
+2025-09-05 14:48:11,777 - src.ui - INFO - Voice processing setup completed
+2025-09-05 14:48:11,779 - src.screen_reader - INFO - Screen monitoring started
+2025-09-05 14:48:11,780 - src.ui - INFO - Screen monitoring setup completed
+2025-09-05 14:48:11,782 - src.ui - INFO - Floating assistant UI initialized
+2025-09-05 14:48:12,563 - __main__ - INFO - SAGE Desktop AI Assistant started successfully
+2025-09-05 14:49:39,609 - src.screen_reader - INFO - Screen monitoring stopped
+2025-09-05 14:49:39,609 - src.voice_processor - INFO - Voice listening stopped
+2025-09-05 14:50:52,690 - root - INFO - Logging configured successfully
+2025-09-05 14:50:52,690 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 14:50:52,694 - __main__ - ERROR - Missing dependencies: PySide6, langchain-groq, SpeechRecognition, keras-ocr, mss
+2025-09-05 14:50:52,695 - __main__ - ERROR - Please install missing dependencies with: pip install -r requirements.txt
+2025-09-05 14:53:24,172 - root - INFO - Logging configured successfully
+2025-09-05 14:53:24,173 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 14:53:24,176 - __main__ - ERROR - Missing dependencies: PySide6, langchain-groq, SpeechRecognition, keras-ocr, mss
+2025-09-05 14:53:24,176 - __main__ - ERROR - Please install missing dependencies with: pip install -r requirements.txt
+2025-09-05 14:54:00,386 - root - INFO - Logging configured successfully
+2025-09-05 14:54:00,386 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 14:54:10,782 - src.ai_agent - INFO - Initialized Groq LLM with model: llama-3.1-70b-versatile
+2025-09-05 14:54:12,669 - src.voice_processor - INFO - Microphone initialized successfully
+2025-09-05 14:54:12,765 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\dedeep vasireddy\\.vscode\\SAGE\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-09-05 14:54:12,766 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\comtypes\gen'
+2025-09-05 14:54:12,932 - src.voice_processor - INFO - TTS engine initialized successfully
+2025-09-05 14:54:12,932 - src.screen_reader - INFO - Initializing KerasOCR pipeline...
+2025-09-05 14:54:15,352 - src.screen_reader - INFO - KerasOCR pipeline initialized successfully
+2025-09-05 14:54:15,430 - src.ui - INFO - Voice processing setup completed
+2025-09-05 14:54:15,432 - src.screen_reader - INFO - Screen monitoring started
+2025-09-05 14:54:15,434 - src.ui - INFO - Screen monitoring setup completed
+2025-09-05 14:54:15,434 - src.ui - INFO - Floating assistant UI initialized
+2025-09-05 14:54:16,196 - __main__ - INFO - SAGE Desktop AI Assistant started successfully
+2025-09-05 14:54:21,261 - src.ai_agent - ERROR - Error processing message: AsyncCompletions.create() got an unexpected keyword argument 'callbacks'
+2025-09-05 14:54:41,274 - src.ui - INFO - Screen context detected: 3407 characters
+2025-09-05 14:55:08,829 - src.ui - INFO - Screen context detected: 3117 characters
+2025-09-05 14:55:23,649 - root - INFO - Logging configured successfully
+2025-09-05 14:55:23,649 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 14:55:34,217 - src.ai_agent - INFO - Initialized Groq LLM with model: llama-3.1-70b-versatile
+2025-09-05 14:55:36,096 - src.voice_processor - INFO - Microphone initialized successfully
+2025-09-05 14:55:36,193 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\dedeep vasireddy\\.vscode\\SAGE\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-09-05 14:55:36,194 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\comtypes\gen'
+2025-09-05 14:55:36,353 - src.voice_processor - INFO - TTS engine initialized successfully
+2025-09-05 14:55:36,353 - src.screen_reader - INFO - Initializing KerasOCR pipeline...
+2025-09-05 14:55:38,927 - src.screen_reader - INFO - KerasOCR pipeline initialized successfully
+2025-09-05 14:55:39,010 - src.ui - INFO - Voice processing setup completed
+2025-09-05 14:55:39,014 - src.screen_reader - INFO - Screen monitoring started
+2025-09-05 14:55:39,014 - src.ui - INFO - Screen monitoring setup completed
+2025-09-05 14:55:39,016 - src.ui - INFO - Floating assistant UI initialized
+2025-09-05 14:55:39,787 - __main__ - INFO - SAGE Desktop AI Assistant started successfully
+2025-09-05 14:56:05,180 - src.ui - INFO - Screen context detected: 3556 characters
+2025-09-05 14:56:15,816 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-05 14:56:15,843 - src.ai_agent - ERROR - Error processing message: Error code: 400 - {'error': {'message': 'The model `llama-3.1-70b-versatile` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2025-09-05 14:56:32,199 - src.ui - INFO - Screen context detected: 3329 characters
+2025-09-05 14:56:59,985 - root - INFO - Logging configured successfully
+2025-09-05 14:56:59,985 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 14:57:10,381 - src.ai_agent - INFO - Initialized Groq LLM with model: llama3-70b-8192
+2025-09-05 14:57:12,235 - src.voice_processor - INFO - Microphone initialized successfully
+2025-09-05 14:57:12,320 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\dedeep vasireddy\\.vscode\\SAGE\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-09-05 14:57:12,320 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\comtypes\gen'
+2025-09-05 14:57:12,487 - src.voice_processor - INFO - TTS engine initialized successfully
+2025-09-05 14:57:12,488 - src.screen_reader - INFO - Initializing KerasOCR pipeline...
+2025-09-05 14:57:15,112 - src.screen_reader - INFO - KerasOCR pipeline initialized successfully
+2025-09-05 14:57:15,161 - src.ui - INFO - Voice processing setup completed
+2025-09-05 14:57:15,165 - src.screen_reader - INFO - Screen monitoring started
+2025-09-05 14:57:15,166 - src.ui - INFO - Screen monitoring setup completed
+2025-09-05 14:57:15,166 - src.ui - INFO - Floating assistant UI initialized
+2025-09-05 14:57:15,784 - __main__ - INFO - SAGE Desktop AI Assistant started successfully
+2025-09-05 14:57:20,642 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-05 14:57:20,644 - src.ai_agent - ERROR - Error processing message: Error code: 400 - {'error': {'message': 'The model `llama3-70b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2025-09-05 14:57:41,281 - src.ui - INFO - Screen context detected: 3612 characters
+2025-09-05 14:58:07,104 - src.ui - INFO - Screen context detected: 2975 characters
+2025-09-05 14:58:19,913 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.375330 seconds
+2025-09-05 14:58:20,768 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-05 14:58:20,927 - src.ai_agent - ERROR - Error processing message: Error code: 400 - {'error': {'message': 'The model `llama3-70b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2025-09-05 14:58:31,151 - root - INFO - Logging configured successfully
+2025-09-05 14:58:31,151 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 14:58:41,806 - src.ai_agent - INFO - Initialized Groq LLM with model: llama-3.1-8b-instant
+2025-09-05 14:58:43,648 - src.voice_processor - INFO - Microphone initialized successfully
+2025-09-05 14:58:43,752 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\dedeep vasireddy\\.vscode\\SAGE\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-09-05 14:58:43,753 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\comtypes\gen'
+2025-09-05 14:58:43,917 - src.voice_processor - INFO - TTS engine initialized successfully
+2025-09-05 14:58:43,946 - src.screen_reader - INFO - Initializing KerasOCR pipeline...
+2025-09-05 14:58:46,603 - src.screen_reader - INFO - KerasOCR pipeline initialized successfully
+2025-09-05 14:58:46,625 - src.ui - INFO - Voice processing setup completed
+2025-09-05 14:58:46,629 - src.screen_reader - INFO - Screen monitoring started
+2025-09-05 14:58:46,630 - src.ui - INFO - Screen monitoring setup completed
+2025-09-05 14:58:46,632 - src.ui - INFO - Floating assistant UI initialized
+2025-09-05 14:58:47,371 - __main__ - INFO - SAGE Desktop AI Assistant started successfully
+2025-09-05 14:59:08,688 - src.ui - INFO - Screen context detected: 2794 characters
+2025-09-05 14:59:32,457 - src.ui - INFO - Screen context detected: 2580 characters
+2025-09-05 14:59:54,791 - src.ui - INFO - Screen context detected: 2265 characters
+2025-09-05 15:00:06,719 - src.ui - INFO - Screen context detected: 366 characters
+2025-09-05 15:00:19,797 - src.ui - INFO - Screen context detected: 784 characters
+2025-09-05 15:00:42,722 - root - INFO - Logging configured successfully
+2025-09-05 15:00:42,722 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 15:00:53,686 - src.ai_agent - INFO - Initialized Groq LLM with model: openai/gpt-oss-20b
+2025-09-05 15:00:55,488 - src.voice_processor - INFO - Microphone initialized successfully
+2025-09-05 15:00:55,579 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\dedeep vasireddy\\.vscode\\SAGE\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-09-05 15:00:55,580 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\comtypes\gen'
+2025-09-05 15:00:55,778 - src.voice_processor - INFO - TTS engine initialized successfully
+2025-09-05 15:00:55,779 - src.screen_reader - INFO - Initializing KerasOCR pipeline...
+2025-09-05 15:00:58,294 - src.screen_reader - INFO - KerasOCR pipeline initialized successfully
+2025-09-05 15:00:58,352 - src.ui - INFO - Voice processing setup completed
+2025-09-05 15:00:58,355 - src.screen_reader - INFO - Screen monitoring started
+2025-09-05 15:00:58,356 - src.ui - INFO - Screen monitoring setup completed
+2025-09-05 15:00:58,358 - src.ui - INFO - Floating assistant UI initialized
+2025-09-05 15:00:59,070 - __main__ - INFO - SAGE Desktop AI Assistant started successfully
+2025-09-05 15:01:07,352 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 15:01:19,390 - src.ui - INFO - Screen context detected: 2433 characters
+2025-09-05 15:01:43,331 - src.ui - INFO - Screen context detected: 2595 characters
+2025-09-05 15:02:06,780 - src.ui - INFO - Screen context detected: 2422 characters
+2025-09-05 15:02:21,614 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.407871 seconds
+2025-09-05 15:02:22,412 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 15:02:27,099 - src.ui - INFO - Screen context detected: 1981 characters
+2025-09-05 15:02:51,279 - src.ui - INFO - Screen context detected: 2620 characters
+2025-09-05 15:03:15,908 - src.ui - INFO - Screen context detected: 2745 characters
+2025-09-05 15:03:40,818 - src.ui - INFO - Screen context detected: 2765 characters
+2025-09-05 15:05:20,872 - root - INFO - Logging configured successfully
+2025-09-05 15:05:20,872 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 15:05:31,349 - src.ai_agent - INFO - Initialized Groq LLM with model: openai/gpt-oss-20b
+2025-09-05 15:05:33,231 - src.voice_processor - INFO - Microphone initialized successfully
+2025-09-05 15:05:33,323 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\dedeep vasireddy\\.vscode\\SAGE\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-09-05 15:05:33,323 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\comtypes\gen'
+2025-09-05 15:05:33,505 - src.voice_processor - INFO - TTS engine initialized successfully
+2025-09-05 15:05:33,506 - src.screen_reader - INFO - Initializing KerasOCR pipeline...
+2025-09-05 15:05:36,001 - src.screen_reader - INFO - KerasOCR pipeline initialized successfully
+2025-09-05 15:05:36,048 - src.ui - INFO - Voice processing setup completed
+2025-09-05 15:05:36,051 - src.screen_reader - INFO - Screen monitoring started
+2025-09-05 15:05:36,051 - src.ui - INFO - Screen monitoring setup completed
+2025-09-05 15:05:36,052 - src.ui - INFO - Floating assistant UI initialized
+2025-09-05 15:05:36,633 - __main__ - INFO - SAGE Desktop AI Assistant started successfully
+2025-09-05 15:05:37,053 - src.ui - INFO - Adding user bubble: Hello, can you see this message?...
+2025-09-05 15:05:37,062 - src.ui - INFO - Adding AI bubble: Yes, I can see your message! This is a test AI res...
+2025-09-05 15:05:41,206 - src.ui - INFO - Adding user bubble: hi...
+2025-09-05 15:05:41,209 - src.ui - INFO - Adding AI bubble: ...
+2025-09-05 15:05:41,569 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 15:05:56,543 - src.ui - INFO - Screen context detected: 2506 characters
+2025-09-05 15:06:09,524 - src.ui - INFO - Screen context detected: 774 characters
+2025-09-05 15:06:14,732 - src.ui - INFO - Adding user bubble: hi...
+2025-09-05 15:06:14,738 - src.ui - INFO - Adding AI bubble: ...
+2025-09-05 15:06:14,751 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.405229 seconds
+2025-09-05 15:06:15,471 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 15:06:26,789 - src.screen_reader - INFO - Screen monitoring stopped
+2025-09-05 15:06:26,817 - src.voice_processor - INFO - Voice listening stopped
+2025-09-05 15:06:31,511 - src.ui - INFO - Screen context detected: 2327 characters
+2025-09-05 15:09:18,398 - root - INFO - Logging configured successfully
+2025-09-05 15:09:18,398 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 15:09:28,552 - src.ai_agent - INFO - Initialized Groq LLM with model: openai/gpt-oss-20b
+2025-09-05 15:09:30,437 - src.voice_processor - INFO - Microphone initialized successfully
+2025-09-05 15:09:30,530 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\dedeep vasireddy\\.vscode\\SAGE\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-09-05 15:09:30,560 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\comtypes\gen'
+2025-09-05 15:09:30,741 - src.voice_processor - INFO - TTS engine initialized successfully
+2025-09-05 15:09:30,741 - src.screen_reader - INFO - Initializing KerasOCR pipeline...
+2025-09-05 15:09:33,143 - src.screen_reader - INFO - KerasOCR pipeline initialized successfully
+2025-09-05 15:09:33,174 - src.ui - INFO - Voice processing setup completed
+2025-09-05 15:09:33,176 - src.screen_reader - INFO - Screen monitoring started
+2025-09-05 15:09:33,177 - src.ui - INFO - Screen monitoring setup completed
+2025-09-05 15:09:33,178 - src.ui - INFO - Floating assistant UI initialized
+2025-09-05 15:09:33,781 - __main__ - INFO - SAGE Desktop AI Assistant started successfully
+2025-09-05 15:09:57,379 - src.ui - INFO - Screen context detected: 3277 characters
+2025-09-05 15:10:14,299 - src.ui - INFO - Adding user bubble: hi...
+2025-09-05 15:10:14,302 - src.ui - INFO - Adding AI bubble: ...
+2025-09-05 15:10:14,770 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 15:10:21,122 - src.ui - INFO - Screen context detected: 2767 characters
+2025-09-05 15:10:42,660 - src.screen_reader - INFO - Screen monitoring stopped
+2025-09-05 15:10:42,671 - src.voice_processor - INFO - Voice listening stopped
+2025-09-05 15:10:44,997 - src.ui - INFO - Screen context detected: 2676 characters
+2025-09-05 15:13:13,951 - root - INFO - Logging configured successfully
+2025-09-05 15:13:13,951 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 15:13:24,716 - src.ai_agent - INFO - Initialized Groq LLM with model: openai/gpt-oss-20b
+2025-09-05 15:13:26,595 - src.voice_processor - INFO - Microphone initialized successfully
+2025-09-05 15:13:26,690 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\dedeep vasireddy\\.vscode\\SAGE\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-09-05 15:13:26,692 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\comtypes\gen'
+2025-09-05 15:13:26,848 - src.voice_processor - INFO - TTS engine initialized successfully
+2025-09-05 15:13:26,849 - src.screen_reader - INFO - Initializing KerasOCR pipeline...
+2025-09-05 15:13:29,469 - src.screen_reader - INFO - KerasOCR pipeline initialized successfully
+2025-09-05 15:13:29,508 - src.ui - INFO - Voice processing setup completed
+2025-09-05 15:13:29,510 - src.screen_reader - INFO - Screen monitoring started
+2025-09-05 15:13:29,511 - src.ui - INFO - Screen monitoring setup completed
+2025-09-05 15:13:29,513 - src.ui - INFO - Floating assistant UI initialized
+2025-09-05 15:13:30,158 - __main__ - INFO - SAGE Desktop AI Assistant started successfully
+2025-09-05 15:13:55,307 - src.ui - INFO - Screen context detected: 3493 characters
+2025-09-05 15:14:21,864 - src.ui - INFO - Screen context detected: 3265 characters
+2025-09-05 15:14:34,323 - src.ui - INFO - Adding user bubble: hi...
+2025-09-05 15:14:34,371 - src.ui - INFO - Adding AI bubble: ...
+2025-09-05 15:14:35,186 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 15:14:48,170 - src.ui - INFO - Screen context detected: 3120 characters
+2025-09-05 15:16:12,694 - root - INFO - Logging configured successfully
+2025-09-05 15:16:12,694 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 15:16:23,040 - src.ai_agent - INFO - Initialized Groq LLM with model: openai/gpt-oss-20b
+2025-09-05 15:16:24,884 - src.voice_processor - INFO - Microphone initialized successfully
+2025-09-05 15:16:24,980 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\dedeep vasireddy\\.vscode\\SAGE\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-09-05 15:16:24,982 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\comtypes\gen'
+2025-09-05 15:16:25,160 - src.voice_processor - INFO - TTS engine initialized successfully
+2025-09-05 15:16:25,160 - src.screen_reader - INFO - Initializing KerasOCR pipeline...
+2025-09-05 15:16:27,663 - src.screen_reader - INFO - KerasOCR pipeline initialized successfully
+2025-09-05 15:16:27,694 - src.ui - INFO - Voice processing setup completed
+2025-09-05 15:16:27,706 - src.screen_reader - INFO - Screen monitoring started
+2025-09-05 15:16:27,707 - src.ui - INFO - Screen monitoring setup completed
+2025-09-05 15:16:27,709 - src.ui - INFO - Floating assistant UI initialized
+2025-09-05 15:16:28,130 - __main__ - INFO - SAGE Desktop AI Assistant started successfully
+2025-09-05 15:16:52,829 - src.ui - INFO - Screen context detected: 3520 characters
+2025-09-05 15:16:59,823 - src.ui - INFO - Adding user bubble: hi...
+2025-09-05 15:16:59,847 - src.ui - INFO - Adding AI bubble: ...
+2025-09-05 15:16:59,852 - src.ui - INFO - Processing message: hi
+2025-09-05 15:17:00,319 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 15:17:19,169 - src.ui - INFO - Screen context detected: 3279 characters
+2025-09-05 15:17:46,631 - src.ui - INFO - Screen context detected: 3384 characters
+2025-09-05 15:20:06,998 - root - INFO - Logging configured successfully
+2025-09-05 15:20:06,998 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 15:20:18,074 - src.ai_agent - INFO - Initialized Groq LLM with model: openai/gpt-oss-20b
+2025-09-05 15:20:19,915 - src.voice_processor - INFO - Microphone initialized successfully
+2025-09-05 15:20:19,994 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\dedeep vasireddy\\.vscode\\SAGE\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-09-05 15:20:19,995 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\comtypes\gen'
+2025-09-05 15:20:20,148 - src.voice_processor - INFO - TTS engine initialized successfully
+2025-09-05 15:20:20,149 - src.screen_reader - INFO - Initializing KerasOCR pipeline...
+2025-09-05 15:20:22,849 - src.screen_reader - INFO - KerasOCR pipeline initialized successfully
+2025-09-05 15:20:22,866 - src.ui - INFO - Voice processing setup completed
+2025-09-05 15:20:22,868 - src.screen_reader - INFO - Screen monitoring started
+2025-09-05 15:20:22,869 - src.ui - INFO - Screen monitoring setup completed
+2025-09-05 15:20:22,869 - src.ui - INFO - Floating assistant UI initialized
+2025-09-05 15:20:23,357 - __main__ - INFO - SAGE Desktop AI Assistant started successfully
+2025-09-05 15:20:32,029 - src.ui - INFO - Adding user bubble: hi...
+2025-09-05 15:20:32,036 - src.ui - INFO - Adding AI bubble: ...
+2025-09-05 15:20:32,054 - src.ui - INFO - Processing message: hi
+2025-09-05 15:20:32,548 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 15:20:32,632 - src.ai_agent - INFO - AI complete response: Hello! I’m SAGE, here to help with anything you’re working on. What can I assist you with today?
+2025-09-05 15:20:32,635 - src.ui - INFO - Response complete. Total tokens: 25, Final response: Hello! I’m SAGE, here to help with anything you’re working on. What can I assist you with today?
+2025-09-05 15:20:49,846 - src.ui - INFO - Screen context detected: 3585 characters
+2025-09-05 15:21:17,974 - src.ui - INFO - Screen context detected: 3338 characters
+2025-09-05 15:21:32,320 - src.ui - INFO - Screen context detected: 818 characters
+2025-09-05 15:21:46,610 - src.ui - INFO - Screen context detected: 817 characters
+2025-09-05 15:22:00,804 - src.ui - INFO - Screen context detected: 840 characters
+2025-09-05 15:22:14,947 - src.ui - INFO - Screen context detected: 900 characters
+2025-09-05 15:22:28,775 - src.ui - INFO - Screen context detected: 802 characters
+2025-09-05 15:22:40,013 - src.ui - INFO - Screen context detected: 310 characters
+2025-09-05 15:22:52,988 - src.ui - INFO - Screen context detected: 621 characters
+2025-09-05 15:23:07,256 - src.ui - INFO - Screen context detected: 823 characters
+2025-09-05 15:23:21,407 - src.ui - INFO - Screen context detected: 842 characters
+2025-09-05 15:23:35,494 - src.ui - INFO - Screen context detected: 863 characters
+2025-09-05 15:23:49,559 - src.ui - INFO - Screen context detected: 853 characters
+2025-09-05 15:24:03,636 - src.ui - INFO - Screen context detected: 862 characters
+2025-09-05 15:24:17,888 - src.ui - INFO - Screen context detected: 837 characters
+2025-09-05 15:24:34,970 - root - INFO - Logging configured successfully
+2025-09-05 15:24:34,976 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 15:24:45,948 - src.ai_agent - INFO - Initialized Groq LLM with model: openai/gpt-oss-20b
+2025-09-05 15:24:47,805 - src.voice_processor - INFO - Microphone initialized successfully
+2025-09-05 15:24:47,906 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\dedeep vasireddy\\.vscode\\SAGE\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-09-05 15:24:47,908 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\comtypes\gen'
+2025-09-05 15:24:48,072 - src.voice_processor - INFO - TTS engine initialized successfully
+2025-09-05 15:24:48,073 - src.screen_reader - INFO - Initializing KerasOCR pipeline...
+2025-09-05 15:24:50,676 - src.screen_reader - INFO - KerasOCR pipeline initialized successfully
+2025-09-05 15:24:50,745 - src.ui - INFO - Voice processing setup completed
+2025-09-05 15:24:50,747 - src.screen_reader - INFO - Screen monitoring started
+2025-09-05 15:24:50,749 - src.ui - INFO - Screen monitoring setup completed
+2025-09-05 15:24:50,749 - src.ui - INFO - Floating assistant UI initialized
+2025-09-05 15:24:51,526 - __main__ - INFO - SAGE Desktop AI Assistant started successfully
+2025-09-05 15:25:14,359 - src.ui - INFO - Expanding chat area for message
+2025-09-05 15:25:14,378 - src.ui - INFO - Adding user bubble: hi...
+2025-09-05 15:25:14,384 - src.ui - INFO - Adding AI bubble: ...
+2025-09-05 15:25:14,386 - src.ui - INFO - Created AI response bubble: <src.ui.ChatBubble(0x25021d95630) at 0x0000024F8B248180>
+2025-09-05 15:25:14,396 - src.ui - INFO - Processing message: hi
+2025-09-05 15:25:14,758 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 15:25:16,821 - src.ui - INFO - Screen context detected: 3493 characters
+2025-09-05 15:25:41,830 - src.ui - INFO - Screen context detected: 2969 characters
+2025-09-05 15:25:56,972 - src.ui - INFO - Adding user bubble: can u guide me with this code...
+2025-09-05 15:25:56,976 - src.ui - INFO - Adding AI bubble: ...
+2025-09-05 15:25:56,978 - src.ui - INFO - Created AI response bubble: <src.ui.ChatBubble(0x25021171a70) at 0x000002501EF31840>
+2025-09-05 15:25:56,981 - src.ui - INFO - Processing message: can u guide me with this code
+2025-09-05 15:25:56,986 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.376508 seconds
+2025-09-05 15:25:57,690 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 15:26:06,454 - src.ui - INFO - Screen context detected: 2917 characters
+2025-09-05 15:26:34,033 - src.ui - INFO - Screen context detected: 3440 characters
+2025-09-05 15:26:58,920 - src.ui - INFO - Screen context detected: 3453 characters
+2025-09-05 15:27:22,111 - src.ui - INFO - Screen context detected: 3251 characters
+2025-09-05 15:27:34,442 - src.ui - INFO - Expanding chat area for message
+2025-09-05 15:27:34,494 - src.ui - INFO - Adding user bubble: guide me with this...
+2025-09-05 15:27:34,503 - src.ui - INFO - Adding AI bubble: ...
+2025-09-05 15:27:34,504 - src.ui - INFO - Created AI response bubble: <src.ui.ChatBubble(0x25059be3850) at 0x0000024F8A24B400>
+2025-09-05 15:27:34,508 - src.ui - INFO - Processing message: guide me with this
+2025-09-05 15:27:34,517 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.443573 seconds
+2025-09-05 15:27:35,349 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 15:27:36,164 - src.ui - INFO - Screen context detected: 1234 characters
+2025-09-05 15:27:50,509 - src.ui - INFO - Screen context detected: 1244 characters
+2025-09-05 15:28:14,152 - src.ui - INFO - Screen context detected: 3415 characters
+2025-09-05 15:28:28,347 - src.ui - INFO - Screen context detected: 1236 characters
+2025-09-05 15:28:42,694 - src.ui - INFO - Screen context detected: 1236 characters
+2025-09-05 15:28:44,932 - src.ui - INFO - Expanding chat area for message
+2025-09-05 15:28:44,934 - src.ui - INFO - Adding user bubble: guide me...
+2025-09-05 15:28:44,935 - src.ui - INFO - Adding AI bubble: ...
+2025-09-05 15:28:44,937 - src.ui - INFO - Created AI response bubble: <src.ui.ChatBubble(0x25021170f90) at 0x0000024F8B403180>
+2025-09-05 15:28:44,940 - src.ui - INFO - Processing message: guide me
+2025-09-05 15:28:44,944 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 0.495093 seconds
+2025-09-05 15:28:45,700 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 15:33:08,257 - root - INFO - Logging configured successfully
+2025-09-05 15:33:08,258 - __main__ - INFO - Starting SAGE Desktop AI Assistant...
+2025-09-05 15:33:17,323 - src.ai_agent - INFO - Initialized Groq LLM with model: openai/gpt-oss-20b
+2025-09-05 15:33:19,271 - src.voice_processor - INFO - Microphone initialized successfully
+2025-09-05 15:33:19,350 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\dedeep vasireddy\\.vscode\\SAGE\\.venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-09-05 15:33:19,351 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\dedeep vasireddy\.vscode\SAGE\.venv\Lib\site-packages\comtypes\gen'
+2025-09-05 15:33:19,485 - src.voice_processor - INFO - TTS engine initialized successfully
+2025-09-05 15:33:19,486 - src.screen_reader - INFO - Initializing KerasOCR pipeline...
+2025-09-05 15:33:21,556 - src.screen_reader - INFO - KerasOCR pipeline initialized successfully
+2025-09-05 15:33:21,600 - src.ui - INFO - Voice processing setup completed
+2025-09-05 15:33:21,615 - src.screen_reader - INFO - Screen monitoring started
+2025-09-05 15:33:21,621 - src.ui - INFO - Screen monitoring setup completed
+2025-09-05 15:33:21,622 - src.ui - INFO - Floating assistant UI initialized
+2025-09-05 15:33:22,021 - __main__ - INFO - SAGE Desktop AI Assistant started successfully
+2025-09-05 15:33:29,533 - src.ui - INFO - Screen context detected: 451 characters
+2025-09-05 15:33:32,409 - src.ui - INFO - Expanding chat area for message
+2025-09-05 15:33:32,410 - src.ui - INFO - Adding user bubble: hi...
+2025-09-05 15:33:32,412 - src.ui - INFO - Adding AI bubble: ...
+2025-09-05 15:33:32,413 - src.ui - INFO - Created AI response bubble: <src.ui.ChatBubble(0x1f9c2c989f0) at 0x000001F9BB4955C0>
+2025-09-05 15:33:32,417 - src.ui - INFO - Processing message: hi
+2025-09-05 15:33:32,724 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 15:33:32,945 - src.ui - INFO - Received token: 'Hey' (type: <class 'str'>)
+2025-09-05 15:33:32,947 - src.ui - INFO - Token 1: Full response so far: 'Hey...'
+2025-09-05 15:33:32,949 - src.ui - INFO - Scheduling UI update with: 'Hey...'
+2025-09-05 15:33:32,977 - src.ui - INFO - Received token: ' there' (type: <class 'str'>)
+2025-09-05 15:33:32,979 - src.ui - INFO - Token 2: Full response so far: 'Hey there...'
+2025-09-05 15:33:32,995 - src.ui - INFO - Scheduling UI update with: 'Hey there...'
+2025-09-05 15:33:32,998 - src.ui - INFO - Received token: '!' (type: <class 'str'>)
+2025-09-05 15:33:33,003 - src.ui - INFO - Token 3: Full response so far: 'Hey there!...'
+2025-09-05 15:33:33,005 - src.ui - INFO - Scheduling UI update with: 'Hey there!...'
+2025-09-05 15:33:33,007 - src.ui - INFO - Received token: ' I' (type: <class 'str'>)
+2025-09-05 15:33:33,009 - src.ui - INFO - Token 4: Full response so far: 'Hey there! I...'
+2025-09-05 15:33:33,009 - src.ui - INFO - Scheduling UI update with: 'Hey there! I...'
+2025-09-05 15:33:33,011 - src.ui - INFO - Received token: ' can' (type: <class 'str'>)
+2025-09-05 15:33:33,012 - src.ui - INFO - Token 5: Full response so far: 'Hey there! I can...'
+2025-09-05 15:33:33,015 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can...'
+2025-09-05 15:33:33,016 - src.ui - INFO - Received token: ' see' (type: <class 'str'>)
+2025-09-05 15:33:33,018 - src.ui - INFO - Token 6: Full response so far: 'Hey there! I can see...'
+2025-09-05 15:33:33,020 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see...'
+2025-09-05 15:33:33,021 - src.ui - INFO - Received token: ' you' (type: <class 'str'>)
+2025-09-05 15:33:33,022 - src.ui - INFO - Token 7: Full response so far: 'Hey there! I can see you...'
+2025-09-05 15:33:33,023 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you...'
+2025-09-05 15:33:33,025 - src.ui - INFO - Received token: '’re' (type: <class 'str'>)
+2025-09-05 15:33:33,028 - src.ui - INFO - Token 8: Full response so far: 'Hey there! I can see you’re...'
+2025-09-05 15:33:33,028 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re...'
+2025-09-05 15:33:33,030 - src.ui - INFO - Received token: ' on' (type: <class 'str'>)
+2025-09-05 15:33:33,031 - src.ui - INFO - Token 9: Full response so far: 'Hey there! I can see you’re on...'
+2025-09-05 15:33:33,031 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on...'
+2025-09-05 15:33:33,033 - src.ui - INFO - Received token: ' You' (type: <class 'str'>)
+2025-09-05 15:33:33,033 - src.ui - INFO - Token 10: Full response so far: 'Hey there! I can see you’re on You...'
+2025-09-05 15:33:33,036 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on You...'
+2025-09-05 15:33:33,038 - src.ui - INFO - Received token: 'Tube' (type: <class 'str'>)
+2025-09-05 15:33:33,038 - src.ui - INFO - Token 11: Full response so far: 'Hey there! I can see you’re on YouTube...'
+2025-09-05 15:33:33,039 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube...'
+2025-09-05 15:33:33,041 - src.ui - INFO - Received token: ' in' (type: <class 'str'>)
+2025-09-05 15:33:33,042 - src.ui - INFO - Token 12: Full response so far: 'Hey there! I can see you’re on YouTube in...'
+2025-09-05 15:33:33,042 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in...'
+2025-09-05 15:33:33,045 - src.ui - INFO - Received token: ' inc' (type: <class 'str'>)
+2025-09-05 15:33:33,046 - src.ui - INFO - Token 13: Full response so far: 'Hey there! I can see you’re on YouTube in inc...'
+2025-09-05 15:33:33,048 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in inc...'
+2025-09-05 15:33:33,049 - src.ui - INFO - Received token: 'ognito' (type: <class 'str'>)
+2025-09-05 15:33:33,050 - src.ui - INFO - Token 14: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,050 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,051 - src.ui - INFO - Received token: ' mode' (type: <class 'str'>)
+2025-09-05 15:33:33,051 - src.ui - INFO - Token 15: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,052 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,053 - src.ui - INFO - Received token: ',' (type: <class 'str'>)
+2025-09-05 15:33:33,053 - src.ui - INFO - Token 16: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,054 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,055 - src.ui - INFO - Received token: ' probably' (type: <class 'str'>)
+2025-09-05 15:33:33,055 - src.ui - INFO - Token 17: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,056 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,058 - src.ui - INFO - Received token: ' trying' (type: <class 'str'>)
+2025-09-05 15:33:33,058 - src.ui - INFO - Token 18: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,059 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,060 - src.ui - INFO - Received token: ' to' (type: <class 'str'>)
+2025-09-05 15:33:33,060 - src.ui - INFO - Token 19: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,061 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,062 - src.ui - INFO - Received token: ' find' (type: <class 'str'>)
+2025-09-05 15:33:33,063 - src.ui - INFO - Token 20: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,064 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,065 - src.ui - INFO - Received token: ' something' (type: <class 'str'>)
+2025-09-05 15:33:33,065 - src.ui - INFO - Token 21: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,066 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,067 - src.ui - INFO - Received token: '.' (type: <class 'str'>)
+2025-09-05 15:33:33,067 - src.ui - INFO - Token 22: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,068 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,069 - src.ui - INFO - Received token: ' How' (type: <class 'str'>)
+2025-09-05 15:33:33,070 - src.ui - INFO - Token 23: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,070 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,071 - src.ui - INFO - Received token: ' can' (type: <class 'str'>)
+2025-09-05 15:33:33,072 - src.ui - INFO - Token 24: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,072 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,073 - src.ui - INFO - Received token: ' I' (type: <class 'str'>)
+2025-09-05 15:33:33,073 - src.ui - INFO - Token 25: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,073 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,074 - src.ui - INFO - Received token: ' help' (type: <class 'str'>)
+2025-09-05 15:33:33,074 - src.ui - INFO - Token 26: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,075 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,075 - src.ui - INFO - Received token: ' you' (type: <class 'str'>)
+2025-09-05 15:33:33,075 - src.ui - INFO - Token 27: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,077 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,078 - src.ui - INFO - Received token: ' today' (type: <class 'str'>)
+2025-09-05 15:33:33,079 - src.ui - INFO - Token 28: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,080 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,081 - src.ui - INFO - Received token: '?' (type: <class 'str'>)
+2025-09-05 15:33:33,081 - src.ui - INFO - Token 29: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,082 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,083 - src.ui - INFO - Received token: '  
+' (type: <class 'str'>)
+2025-09-05 15:33:33,083 - src.ui - INFO - Token 30: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,084 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,085 - src.ui - INFO - Received token: '-' (type: <class 'str'>)
+2025-09-05 15:33:33,085 - src.ui - INFO - Token 31: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,085 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,087 - src.ui - INFO - Received token: ' Want' (type: <class 'str'>)
+2025-09-05 15:33:33,087 - src.ui - INFO - Token 32: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,087 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,088 - src.ui - INFO - Received token: ' to' (type: <class 'str'>)
+2025-09-05 15:33:33,089 - src.ui - INFO - Token 33: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,090 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,090 - src.ui - INFO - Received token: ' refine' (type: <class 'str'>)
+2025-09-05 15:33:33,091 - src.ui - INFO - Token 34: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,091 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,092 - src.ui - INFO - Received token: ' that' (type: <class 'str'>)
+2025-09-05 15:33:33,092 - src.ui - INFO - Token 35: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,093 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,094 - src.ui - INFO - Received token: ' search' (type: <class 'str'>)
+2025-09-05 15:33:33,094 - src.ui - INFO - Token 36: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,095 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,096 - src.ui - INFO - Received token: '?' (type: <class 'str'>)
+2025-09-05 15:33:33,096 - src.ui - INFO - Token 37: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,098 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,099 - src.ui - INFO - Received token: '  
+' (type: <class 'str'>)
+2025-09-05 15:33:33,099 - src.ui - INFO - Token 38: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,099 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,100 - src.ui - INFO - Received token: '-' (type: <class 'str'>)
+2025-09-05 15:33:33,100 - src.ui - INFO - Token 39: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,101 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,102 - src.ui - INFO - Received token: ' Need' (type: <class 'str'>)
+2025-09-05 15:33:33,102 - src.ui - INFO - Token 40: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,102 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,103 - src.ui - INFO - Received token: ' help' (type: <class 'str'>)
+2025-09-05 15:33:33,104 - src.ui - INFO - Token 41: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,104 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,105 - src.ui - INFO - Received token: ' with' (type: <class 'str'>)
+2025-09-05 15:33:33,106 - src.ui - INFO - Token 42: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,106 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,106 - src.ui - INFO - Received token: ' subscribing' (type: <class 'str'>)
+2025-09-05 15:33:33,107 - src.ui - INFO - Token 43: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,107 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,108 - src.ui - INFO - Received token: ',' (type: <class 'str'>)
+2025-09-05 15:33:33,108 - src.ui - INFO - Token 44: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,109 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,109 - src.ui - INFO - Received token: ' liking' (type: <class 'str'>)
+2025-09-05 15:33:33,110 - src.ui - INFO - Token 45: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,110 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,111 - src.ui - INFO - Received token: ',' (type: <class 'str'>)
+2025-09-05 15:33:33,111 - src.ui - INFO - Token 46: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,111 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,112 - src.ui - INFO - Received token: ' or' (type: <class 'str'>)
+2025-09-05 15:33:33,112 - src.ui - INFO - Token 47: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,113 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,114 - src.ui - INFO - Received token: ' navigating' (type: <class 'str'>)
+2025-09-05 15:33:33,115 - src.ui - INFO - Token 48: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,115 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,115 - src.ui - INFO - Received token: ' the' (type: <class 'str'>)
+2025-09-05 15:33:33,115 - src.ui - INFO - Token 49: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,117 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,118 - src.ui - INFO - Received token: ' Shorts' (type: <class 'str'>)
+2025-09-05 15:33:33,118 - src.ui - INFO - Token 50: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,119 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,120 - src.ui - INFO - Received token: '?' (type: <class 'str'>)
+2025-09-05 15:33:33,121 - src.ui - INFO - Token 51: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,121 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,122 - src.ui - INFO - Received token: '  
+' (type: <class 'str'>)
+2025-09-05 15:33:33,123 - src.ui - INFO - Token 52: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,123 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,124 - src.ui - INFO - Received token: '-' (type: <class 'str'>)
+2025-09-05 15:33:33,124 - src.ui - INFO - Token 53: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,124 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,125 - src.ui - INFO - Received token: ' Or' (type: <class 'str'>)
+2025-09-05 15:33:33,126 - src.ui - INFO - Token 54: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,126 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,128 - src.ui - INFO - Received token: ' maybe' (type: <class 'str'>)
+2025-09-05 15:33:33,128 - src.ui - INFO - Token 55: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,128 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,128 - src.ui - INFO - Received token: ' you' (type: <class 'str'>)
+2025-09-05 15:33:33,130 - src.ui - INFO - Token 56: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,130 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,131 - src.ui - INFO - Received token: '’d' (type: <class 'str'>)
+2025-09-05 15:33:33,131 - src.ui - INFO - Token 57: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,132 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,133 - src.ui - INFO - Received token: ' like' (type: <class 'str'>)
+2025-09-05 15:33:33,134 - src.ui - INFO - Token 58: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,135 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,135 - src.ui - INFO - Received token: ' a' (type: <class 'str'>)
+2025-09-05 15:33:33,136 - src.ui - INFO - Token 59: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,136 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,137 - src.ui - INFO - Received token: ' quick' (type: <class 'str'>)
+2025-09-05 15:33:33,137 - src.ui - INFO - Token 60: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,137 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,138 - src.ui - INFO - Received token: ' summary' (type: <class 'str'>)
+2025-09-05 15:33:33,139 - src.ui - INFO - Token 61: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,140 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,141 - src.ui - INFO - Received token: ' of' (type: <class 'str'>)
+2025-09-05 15:33:33,142 - src.ui - INFO - Token 62: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,142 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,143 - src.ui - INFO - Received token: ' the' (type: <class 'str'>)
+2025-09-05 15:33:33,143 - src.ui - INFO - Token 63: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,144 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,145 - src.ui - INFO - Received token: ' video' (type: <class 'str'>)
+2025-09-05 15:33:33,145 - src.ui - INFO - Token 64: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,145 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,148 - src.ui - INFO - Received token: ' you' (type: <class 'str'>)
+2025-09-05 15:33:33,148 - src.ui - INFO - Token 65: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,149 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,150 - src.ui - INFO - Received token: '’re' (type: <class 'str'>)
+2025-09-05 15:33:33,150 - src.ui - INFO - Token 66: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,151 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,152 - src.ui - INFO - Received token: ' watching' (type: <class 'str'>)
+2025-09-05 15:33:33,155 - src.ui - INFO - Token 67: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,157 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,158 - src.ui - INFO - Received token: '?' (type: <class 'str'>)
+2025-09-05 15:33:33,158 - src.ui - INFO - Token 68: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,159 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,162 - src.ui - INFO - Received token: '  
+
+' (type: <class 'str'>)
+2025-09-05 15:33:33,162 - src.ui - INFO - Token 69: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,163 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,164 - src.ui - INFO - Received token: 'Just' (type: <class 'str'>)
+2025-09-05 15:33:33,164 - src.ui - INFO - Token 70: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,165 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,165 - src.ui - INFO - Received token: ' let' (type: <class 'str'>)
+2025-09-05 15:33:33,169 - src.ui - INFO - Token 71: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,170 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,171 - src.ui - INFO - Received token: ' me' (type: <class 'str'>)
+2025-09-05 15:33:33,172 - src.ui - INFO - Token 72: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,173 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,178 - src.ui - INFO - Received token: ' know' (type: <class 'str'>)
+2025-09-05 15:33:33,179 - src.ui - INFO - Token 73: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,179 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,181 - src.ui - INFO - Received token: ' what' (type: <class 'str'>)
+2025-09-05 15:33:33,183 - src.ui - INFO - Token 74: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,184 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,186 - src.ui - INFO - Received token: ' you' (type: <class 'str'>)
+2025-09-05 15:33:33,187 - src.ui - INFO - Token 75: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,189 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,190 - src.ui - INFO - Received token: '’d' (type: <class 'str'>)
+2025-09-05 15:33:33,191 - src.ui - INFO - Token 76: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,193 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,194 - src.ui - INFO - Received token: ' like' (type: <class 'str'>)
+2025-09-05 15:33:33,196 - src.ui - INFO - Token 77: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,196 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,198 - src.ui - INFO - Received token: ' to' (type: <class 'str'>)
+2025-09-05 15:33:33,198 - src.ui - INFO - Token 78: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,199 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,199 - src.ui - INFO - Received token: ' do' (type: <class 'str'>)
+2025-09-05 15:33:33,200 - src.ui - INFO - Token 79: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,201 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,204 - src.ui - INFO - Received token: '!' (type: <class 'str'>)
+2025-09-05 15:33:33,205 - src.ui - INFO - Token 80: Full response so far: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,205 - src.ui - INFO - Scheduling UI update with: 'Hey there! I can see you’re on YouTube in incognit...'
+2025-09-05 15:33:33,209 - src.ai_agent - INFO - AI complete response: Hey there! I can see you’re on YouTube in incognito mode, probably trying to find something. How can I help you today?  
+- Want to refine that search?  
+- Need help with subscribing, liking, or navigating the Shorts?  
+- Or maybe you’d like a quick summary of the video you’re watching?  
+
+Just let me know what you’d like to do!
+2025-09-05 15:33:33,212 - src.ui - INFO - Response complete. Total tokens: 80, Final response: Hey there! I can see you’re on YouTube in incognito mode, probably trying to find something. How can I help you today?  
+- Want to refine that search?  
+- Need help with subscribing, liking, or navigating the Shorts?  
+- Or maybe you’d like a quick summary of the video you’re watching?  
+
+Just let me know what you’d like to do!
+2025-09-05 15:33:40,208 - src.ui - INFO - Screen context detected: 464 characters
+2025-09-05 15:34:02,103 - src.ui - INFO - Screen context detected: 2963 characters
+2025-09-05 15:34:09,827 - src.screen_reader - INFO - Screen monitoring stopped
+2025-09-05 15:34:09,827 - src.voice_processor - INFO - Voice listening stopped
