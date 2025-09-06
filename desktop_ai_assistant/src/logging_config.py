@@ -24,17 +24,27 @@ def setup_logging():
     # Clear existing handlers
     root_logger.handlers.clear()
     
-    # Console handler
+    # Console handler with UTF-8 encoding
     console_handler = logging.StreamHandler(sys.stdout)
     console_handler.setLevel(logging.INFO)
     console_handler.setFormatter(formatter)
+    
+    # Set encoding to UTF-8 if available
+    if hasattr(console_handler.stream, 'reconfigure'):
+        try:
+            console_handler.stream.reconfigure(encoding='utf-8', errors='replace')
+        except Exception:
+            pass  # Fallback for older Python versions
+    
     root_logger.addHandler(console_handler)
     
-    # File handler with rotation
+    # File handler with rotation and UTF-8 encoding
     file_handler = logging.handlers.RotatingFileHandler(
         log_file,
         maxBytes=LOGGING_CONFIG["max_bytes"],
-        backupCount=LOGGING_CONFIG["backup_count"]
+        backupCount=LOGGING_CONFIG["backup_count"],
+        encoding='utf-8',
+        errors='replace'
     )
     file_handler.setLevel(getattr(logging, LOGGING_CONFIG["level"]))
     file_handler.setFormatter(formatter)

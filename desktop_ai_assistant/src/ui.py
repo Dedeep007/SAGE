@@ -5,6 +5,7 @@ Implements a modern, glassmorphic design with animations and drag functionality.
 import sys
 import asyncio
 import logging
+import threading
 from typing import Optional, List
 import json
 import time
@@ -122,17 +123,24 @@ class ChatBubble(QFrame):
         self.text_label.setWordWrap(True)
         
         # Set different text color for user vs AI
-        text_color = "#FFFFFF" if self.is_user else "#F0F0F0"
+        if self.is_user:
+            text_color = "#FFFFFF"
+            bg_color = "rgba(0, 122, 204, 0.2)"  # Slight background for visibility
+        else:
+            text_color = "#FFFFFF"  
+            bg_color = "rgba(255, 255, 255, 0.1)"  # Slight white background for AI text
         
         self.text_label.setStyleSheet(f"""
             QLabel {{
                 color: {text_color};
+                background-color: {bg_color};
                 font-size: 14px;
                 font-weight: 500;
                 line-height: 1.4;
-                background: transparent;
-                border: none;
-                padding: 2px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 4px;
+                padding: 4px;
+                margin: 2px;
             }}
         """)
         
@@ -151,9 +159,9 @@ class ChatBubble(QFrame):
             alignment = "margin-left: 50px;"
             border = "2px solid rgba(0, 122, 204, 0.3);"
         else:
-            bg_color = "rgba(70, 70, 70, 0.95)"  # Much more opaque for AI responses
+            bg_color = "rgba(70, 70, 70, 0.98)"  # Almost fully opaque for AI responses
             alignment = "margin-right: 50px;"
-            border = "2px solid rgba(255, 255, 255, 0.1);"
+            border = "2px solid rgba(255, 255, 255, 0.3);"  # More visible border
         
         return f"""
             QFrame {{
@@ -162,20 +170,38 @@ class ChatBubble(QFrame):
                 {border}
                 {alignment}
                 margin: 6px;
-                padding: 4px;
-                min-height: 30px;
+                padding: 8px;
+                min-height: 40px;
             }}
         """
     
     def update_text(self, new_text: str):
         """Update the bubble text (for streaming)."""
-        logger.info(f"ChatBubble.update_text called with: '{new_text[:50]}...'")
+        logger.info(f"[DEBUG] ChatBubble.update_text called with: '{new_text[:100]}...'")
+        logger.info(f"[DEBUG] Bubble is_user: {self.is_user}, visible: {self.isVisible()}")
+        logger.info(f"[DEBUG] Text label visible: {self.text_label.isVisible()}")
+        logger.info(f"[DEBUG] Old text: '{self.text[:50]}...'")
+        
         self.text = new_text
         self.text_label.setText(new_text)
-        # Force refresh
+        
+        # Debug the actual text that was set
+        actual_text = self.text_label.text()
+        logger.info(f"[DEBUG] Text actually set to label: '{actual_text[:100]}...'")
+        logger.info(f"[DEBUG] Label geometry: {self.text_label.geometry()}")
+        logger.info(f"[DEBUG] Bubble geometry: {self.geometry()}")
+        logger.info(f"[DEBUG] Label font: {self.text_label.font()}")
+        logger.info(f"[DEBUG] Label style sheet: {self.text_label.styleSheet()}")
+        
+        # Force refresh and check if text is empty
+        if not new_text.strip():
+            logger.warning("[DEBUG] WARNING: New text is empty or whitespace only!")
+        
         self.text_label.update()
         self.update()
-        logger.info(f"ChatBubble text updated successfully")
+        self.repaint()
+        
+        logger.info(f"[DEBUG] ChatBubble text updated successfully")
 
 
 class FloatingAssistant(QWidget):
@@ -183,6 +209,7 @@ class FloatingAssistant(QWidget):
     
     # Define signals for thread-safe communication
     screen_context_received = Signal(object)  # ScreenContext
+    response_update_signal = Signal(str)  # For updating response bubbles
     
     def __init__(self):
         super().__init__()
@@ -209,6 +236,9 @@ class FloatingAssistant(QWidget):
         # Screen context signal
         self.screen_context_received.connect(self._handle_screen_context_safe)
         
+        # Response update signal
+        self.response_update_signal.connect(self._update_response_bubble)
+        
         # Setup UI
         self._setup_ui()
         self._setup_signals()
@@ -222,6 +252,9 @@ class FloatingAssistant(QWidget):
         self.move(*UI_CONFIG["start_position"])
         
         logger.info("Floating assistant UI initialized")
+        
+        # Auto-generate screen context and speak on startup
+        QTimer.singleShot(3000, self._startup_screen_analysis)
     
     def _setup_ui(self):
         """Setup the user interface."""
@@ -446,21 +479,28 @@ class FloatingAssistant(QWidget):
         if not message:
             return
         
+        logger.info(f"[DEBUG] _send_message called with: '{message}'")
         self.text_input.clear()
         
         # Ensure chat area is visible
         if not self.is_expanded:
-            logger.info("Expanding chat area for message")
+            logger.info("[DEBUG] Expanding chat area for message")
             self.toggle_expand()
         
         # Add user message bubble
+        logger.info("[DEBUG] Adding user message bubble")
         self._add_chat_bubble(message, is_user=True)
         
         # Create placeholder for AI response
+        logger.info("[DEBUG] Creating AI response bubble placeholder")
         self.current_response_bubble = self._add_chat_bubble("", is_user=False)
-        logger.info(f"Created AI response bubble: {self.current_response_bubble}")
+        logger.info(f"[DEBUG] Created AI response bubble: {self.current_response_bubble}")
+        logger.info(f"[DEBUG] AI bubble visible: {self.current_response_bubble.isVisible()}")
+        logger.info(f"[DEBUG] AI bubble text label: {self.current_response_bubble.text_label}")
+        logger.info(f"[DEBUG] AI bubble initial text: '{self.current_response_bubble.text_label.text()}'")
         
         # Process message asynchronously using QTimer
+        logger.info("[DEBUG] Scheduling async task for AI processing")
         QTimer.singleShot(0, lambda: self._schedule_async_task(message))
     
     def _schedule_async_task(self, message: str):
@@ -495,62 +535,81 @@ class FloatingAssistant(QWidget):
     async def _process_message_async(self, message: str):
         """Process message asynchronously."""
         try:
-            logger.info(f"Processing message: {message}")
+            logger.info(f"[DEBUG] Starting async LLM processing for message: {message}")
             response_parts = []
             token_count = 0
+            full_response = ""  # Initialize here to avoid UnboundLocalError
+            
             async for token in self.ai_agent.process_message(message):
-                logger.info(f"Received token: '{token}' (type: {type(token)})")
+                logger.info(f"[DEBUG] Received token from LLM: '{token}' (type: {type(token)})")
                 response_parts.append(str(token))  # Ensure it's a string
                 token_count += 1
-                # Update UI safely using QTimer
                 full_response = ''.join(response_parts)
-                logger.info(f"Token {token_count}: Full response so far: '{full_response[:50]}...'")
-                # Use direct method call instead of lambda to avoid closure issues
-                self._schedule_ui_update(full_response)
+                logger.info(f"[DEBUG] Streaming response so far ({token_count} tokens): '{full_response[:100]}...'")
+                self._update_response_bubble_direct(full_response)
             
-            # Mark response as complete
-            try:
-                logger.info(f"Response complete. Total tokens: {token_count}, Final response: {full_response}")
-            except UnicodeEncodeError:
-                logger.info(f"Response complete. Total tokens: {token_count}, Final response: {repr(full_response)}")
-            QTimer.singleShot(0, lambda: self._mark_response_complete())
-            
+            logger.info(f"[DEBUG] LLM response streaming complete. Total tokens: {token_count}")
+            logger.info(f"[DEBUG] Final full response: '{full_response[:200]}...'")
+            QTimer.singleShot(0, lambda: self._mark_response_complete(full_response))
         except Exception as e:
-            logger.error(f"Error processing message: {e}")
+            logger.error(f"[DEBUG] Error processing LLM message: {e}")
             QTimer.singleShot(0, lambda: self._handle_message_error())
+
+    def _update_response_bubble_direct(self, response: str):
+        """Update response bubble directly (called from async thread)."""
+        logger.info(f"[DEBUG] _update_response_bubble_direct called with response: '{response[:100]}...'")
+        if self.current_response_bubble:
+            logger.info("[DEBUG] Emitting response_update_signal")
+            self.response_update_signal.emit(response)
+            
+            # Also try direct method call as fallback
+            logger.info("[DEBUG] Also trying direct method call as fallback")
+            try:
+                self.current_response_bubble.update_text(response)
+                logger.info("[DEBUG] Direct method call succeeded")
+            except Exception as e:
+                logger.error(f"[DEBUG] Direct method call failed: {e}")
+        else:
+            logger.warning("[DEBUG] No current response bubble to update!")
     
-    def _schedule_ui_update(self, response_text: str):
-        """Schedule UI update for response text."""
-        logger.info(f"Scheduling UI update with: '{response_text[:50]}...'")
-        QTimer.singleShot(0, lambda: self._update_response_bubble(response_text))
-    
+    def _execute_pending_update(self):
+        """Execute the pending UI update in the main thread."""
+        if hasattr(self, '_pending_response'):
+            response = self._pending_response
+            delattr(self, '_pending_response')
+            logger.info(f"[DEBUG] _execute_pending_update called with: '{response[:100]}...'")
+            self._update_response_bubble(response)
+        else:
+            logger.warning("[DEBUG] No pending response to update!")
+
     def _update_response_bubble(self, response: str):
         """Update response bubble in UI thread."""
-        logger.info(f"_update_response_bubble called with: '{response[:50]}...'")
+        logger.info(f"[DEBUG] _update_response_bubble called with: '{response[:100]}...'")
+        logger.info(f"[DEBUG] Current thread: {threading.current_thread().name}")
+        logger.info(f"[DEBUG] self.current_response_bubble exists: {self.current_response_bubble is not None}")
         
         if self.current_response_bubble:
-            logger.info("Current response bubble exists, updating text...")
+            logger.info("[DEBUG] Updating current response bubble text.")
+            logger.info(f"[DEBUG] Bubble before update - text: '{self.current_response_bubble.text_label.text()}'")
             self.current_response_bubble.update_text(response)
+            logger.info(f"[DEBUG] Bubble after update - text: '{self.current_response_bubble.text_label.text()}'")
             self._scroll_to_bottom()
-            # Force a visual update
             self.current_response_bubble.repaint()
             self.chat_area.repaint()
-            logger.info("Response bubble updated successfully")
+            logger.info("[DEBUG] Response bubble updated successfully.")
         else:
-            logger.warning("No current response bubble to update!")
-    
-    def _mark_response_complete(self):
+            logger.warning("[DEBUG] No current response bubble to update!")
+
+    def _mark_response_complete(self, full_response: str = ""):
         """Mark response as complete in UI thread."""
-        logger.info("Marking response as complete...")
-        # Get the final response text to speak
-        if self.current_response_bubble and VOICE_CONFIG.get("ai_speak_responses", True):
-            final_response = self.current_response_bubble.text_label.text()
-            logger.info(f"Final response text: {final_response[:100]}...")
-            if final_response.strip():
-                # Schedule speaking the response
-                logger.info("Scheduling AI speech...")
-                QTimer.singleShot(100, lambda: self._speak_response(final_response))
-        
+        logger.info("[DEBUG] Marking response as complete...")
+        response_to_speak = full_response
+        if not response_to_speak and self.current_response_bubble:
+            response_to_speak = self.current_response_bubble.text_label.text()
+        logger.info(f"[DEBUG] Final response to speak: '{response_to_speak[:200]}...'")
+        if VOICE_CONFIG.get("ai_speak_responses", True) and response_to_speak.strip():
+            logger.info("[DEBUG] Starting AI speech for response.")
+            self._speak_response_simple(response_to_speak)
         self.current_response_bubble = None
     
     def _speak_response(self, response_text: str):
@@ -575,6 +634,27 @@ class FloatingAssistant(QWidget):
         except Exception as e:
             logger.error(f"Error scheduling speech: {e}")
     
+    def _speak_response_simple(self, text: str):
+        """Speak response using faster local TTS."""
+        try:
+            logger.info(f"Speaking with local TTS: {text[:50]}...")
+            # Use threading to avoid blocking UI
+            import threading
+            def speak_async():
+                try:
+                    import asyncio
+                    # Use local TTS which is faster
+                    asyncio.run(self.voice_processor.speak_text(text, use_gtts=False))
+                    logger.info("Local TTS completed successfully")
+                except Exception as e:
+                    logger.error(f"Error with local TTS: {e}")
+            
+            thread = threading.Thread(target=speak_async, daemon=True)
+            thread.start()
+            
+        except Exception as e:
+            logger.error(f"Error with simple speech: {e}")
+    
     def _handle_message_error(self):
         """Handle message processing error in UI thread."""
         if self.current_response_bubble:
@@ -583,21 +663,34 @@ class FloatingAssistant(QWidget):
     
     def _add_chat_bubble(self, text: str, is_user: bool = True) -> ChatBubble:
         """Add a chat bubble to the conversation."""
+        logger.info(f"[DEBUG] Creating {'user' if is_user else 'AI'} bubble with text: '{text[:100]}...'")
         bubble = ChatBubble(text, is_user)
         
         # Debug logging
-        logger.info(f"Adding {'user' if is_user else 'AI'} bubble: {text[:50]}...")
+        logger.info(f"[DEBUG] Bubble created with geometry: {bubble.geometry()}")
+        logger.info(f"[DEBUG] Bubble text label geometry: {bubble.text_label.geometry()}")
+        logger.info(f"[DEBUG] Bubble text label text: '{bubble.text_label.text()[:100]}...'")
+        logger.info(f"[DEBUG] Chat layout count before insert: {self.chat_layout.count()}")
         
         # Insert before the stretch item (which is last)
-        self.chat_layout.insertWidget(self.chat_layout.count() - 1, bubble)
+        insert_index = self.chat_layout.count() - 1
+        self.chat_layout.insertWidget(insert_index, bubble)
         self.chat_bubbles.append(bubble)
+        
+        logger.info(f"[DEBUG] Chat layout count after insert: {self.chat_layout.count()}")
         
         # Ensure bubble is visible
         bubble.show()
         bubble.setVisible(True)
         
+        logger.info(f"[DEBUG] Bubble visible after show: {bubble.isVisible()}")
+        logger.info(f"[DEBUG] Bubble text label visible: {bubble.text_label.isVisible()}")
+        logger.info(f"[DEBUG] Bubble text label final text: '{bubble.text_label.text()[:100]}...'")
+        
         # Force layout update
         self.chat_content.updateGeometry()
+        self.chat_area.updateGeometry()
+        self.update()
         
         # Scroll to bottom
         QTimer.singleShot(50, self._scroll_to_bottom)
@@ -746,8 +839,13 @@ class FloatingAssistant(QWidget):
             suggestion = await self.ai_agent.generate_proactive_suggestion()
             if suggestion and VOICE_CONFIG.get("ai_speak_suggestions", True):
                 logger.info(f"Generated suggestion: {suggestion}")
-                # Speak the suggestion
-                await self.voice_processor.speak_text(suggestion)
+                
+                # Add suggestion to chat if expanded
+                if self.is_expanded:
+                    self._add_chat_bubble(f"💡 {suggestion}", is_user=False)
+                
+                # Speak the suggestion using local TTS
+                await self.voice_processor.speak_text(suggestion, use_gtts=False)
         except Exception as e:
             logger.error(f"Error in suggestion generation: {e}")
     
@@ -762,16 +860,45 @@ class FloatingAssistant(QWidget):
         
         event.accept()
     
-    def _add_test_messages(self):
-        """Add test messages to verify chat visibility (for debugging)."""
-        if not self.is_expanded:
-            self.toggle_expand()
-        
-        # Add test user message
-        self._add_chat_bubble("Hello, can you see this message?", is_user=True)
-        
-        # Add test AI response
-        self._add_chat_bubble("Yes, I can see your message! This is a test AI response to verify the chat interface is working properly.", is_user=False)
+    def _startup_screen_analysis(self):
+        """Automatically analyze screen and speak on startup."""
+        try:
+            logger.info("Starting automatic screen analysis...")
+            # Force capture screen context
+            screen_context = self.screen_reader.capture_screen_context()
+            
+            if screen_context and screen_context.text_content.strip():
+                logger.info(f"Screen content captured: {len(screen_context.text_content)} characters")
+                
+                # Update AI agent with screen context
+                self.ai_agent.update_screen_context(screen_context)
+                
+                # Generate initial greeting with screen context
+                startup_message = "Hello! I'm SAGE, your AI assistant. I can see your screen and I'm ready to help."
+                
+                # Expand chat and add greeting
+                if not self.is_expanded:
+                    self.toggle_expand()
+                
+                self._add_chat_bubble(startup_message, is_user=False)
+                
+                # Speak the greeting
+                self._speak_response_simple(startup_message)
+                
+                # Generate screen-based suggestion after a delay
+                QTimer.singleShot(4000, self._generate_proactive_suggestion)
+                
+            else:
+                logger.warning("No screen content detected on startup")
+                # Just speak a simple greeting
+                simple_greeting = "Hello! I'm SAGE, your AI assistant. How can I help you today?"
+                self._speak_response_simple(simple_greeting)
+                
+        except Exception as e:
+            logger.error(f"Error in startup screen analysis: {e}")
+            # Fallback greeting
+            fallback_greeting = "Hello! I'm SAGE, your AI assistant."
+            self._speak_response_simple(fallback_greeting)
 
 
 class SAGEApplication(QApplication):

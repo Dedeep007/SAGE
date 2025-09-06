@@ -132,9 +132,9 @@ class AIAgent:
                 full_response = ''.join(response_tokens)
                 # Fix unicode issues in logging
                 try:
-                    logger.info(f"AI complete response: {full_response}")
+                    logger.info(f"AI complete response: {full_response[:100]}...")
                 except UnicodeEncodeError:
-                    logger.info(f"AI complete response: {repr(full_response)}")
+                    logger.info(f"AI complete response: [Unicode content]")
                 if full_response.strip():
                     self._add_to_history("assistant", full_response)
                 
