@@ -1,0 +1,10 @@
+langchain
+langchain_groq
+langchain-community
+PyQt6
+pyautogui
+mss
+Pillow
+gradio_client
+pyinstaller
+python-dotenv
