@@ -3,12 +3,11 @@ import time
 from langchain.tools import tool
 import pyautogui
 from mss import mss
-from gradio_client import Client, handle_file
 import subprocess
 import traceback
 
 # Optional safety measure for PyAutoGUI
-pyautogui.FAILSAFE = True
+pyautogui.FAILSAFE = False
 pyautogui.PAUSE = 0.5
 
 def take_screenshot(filename='current_screenshot.png'):
@@ -25,35 +24,79 @@ def _get_element_coordinates(instruction: str) -> tuple[int, int]:
     if not image_path:
         raise Exception("Failed to take screenshot.")
     
+    import base64
+    from groq import Groq
+    with open(image_path, "rb") as image_file:
+        base64_image = base64.b64encode(image_file.read()).decode('utf-8')
+        
+    client = Groq()
+    
+    # Prompting the vision model to return coordinates
+    prompt = f"Find the UI element: '{instruction}'. Return its center coordinates. Format your coordinate response exactly as [x, y]."
+    
     max_retries = 3
     result = None
     for attempt in range(max_retries):
         try:
-            client = Client("johnisafridge/GUI-Actor")
-            result = client.predict(
-                    image=handle_file(image_path),
-                    instruction=instruction,
-                    api_name="/predict"
+            completion = client.chat.completions.create(
+                model="meta-llama/llama-4-scout-17b-16e-instruct",
+                messages=[
+                  {
+                    "role": "user",
+                    "content": [
+                        {"type": "text", "text": prompt},
+                        {"type": "image_url", "image_url": {"url": f"data:image/webp;base64,{base64_image}"}}
+                    ]
+                  }
+                ],
+                temperature=0.1,
+                max_completion_tokens=1024,
+                top_p=1,
+                stream=False
             )
+            result = completion.choices[0].message.content
             break
         except Exception as e:
-            if "ReadTimeout" in str(e) or "timeout" in str(e).lower() or "Connection" in str(e):
+            if "ReadTimeout" in str(e) or "timeout" in str(e).lower() or "Connection" in str(e) or "rate_limit" in str(e).lower():
                 if attempt < max_retries - 1:
-                    time.sleep(10) # Wait longer for space to wake up
+                    time.sleep(5)
                     continue
             raise e
 
     import re
-    coords = re.findall(r"[\(\[]([0-9.]+),\s*([0-9.]+)[\)\]]", str(result))
+    # We look for [x, y] or (x, y) with optional spaces
+    coords = re.findall(r"[\(\[]\s*([0-9.]+)\s*,\s*([0-9.]+)\s*[\)\]]", str(result))
     
     if coords:
-        x_norm, y_norm = float(coords[0][0]), float(coords[0][1])
+        x_val, y_val = float(coords[0][0]), float(coords[0][1])
         width, height = pyautogui.size()
-        x = int(x_norm * width)
-        y = int(y_norm * height)
+        
+        # Check if the model returns normalized or actual coordinates
+        if x_val <= 1.0 and y_val <= 1.0:
+            # Normalized [0.0, 1.0] scale
+            x = int(x_val * width)
+            y = int(y_val * height)
+        elif x_val <= 1000.0 and y_val <= 1000.0 and (int(x_val) != x_val or type(x_val) == float) and x_val <= 100.0:
+             # Normalized [0.0, 100.0] scale
+             x = int((x_val / 100.0) * width)
+             y = int((y_val / 100.0) * height)
+        elif x_val <= 1000.0 and y_val <= 1000.0 and (width > 1000 or height > 1000) and (x_val == int(x_val) and y_val == int(y_val)):
+             # normalized [0-1000] or actual coords?
+             # Llama models often output actual OR [0-1000] normalized. 
+             # Let's assume actual unless it strictly looks like 1000 scale.
+             # We can print to log to help debug.
+             print(f"Warning: ambiguous scale for ({x_val}, {y_val}). Assuming actual pixels.")
+             x = int(x_val)
+             y = int(y_val)
+        else:
+            # Actual pixel coordinates
+            x = int(x_val)
+            y = int(y_val)
+            
+        print(f"Model returned raw coords: ({x_val}, {y_val}), mapped to pixel: ({x}, {y}) for screen {width}x{height}")
         return x, y
     else:
-        raise Exception(f"GUI-Actor could not natively map the coordinates for '{instruction}'. A pop-up, menu, or off-screen error may be blocking the UI! Use read_screen_text_tool immediately to verify the visual state.")
+        raise Exception(f"Llama Scout could not find the coordinates for '{instruction}'. Result was: {result}. A pop-up, menu, or off-screen error may be blocking the UI! Use read_screen_text_tool immediately to verify the visual state.")
 
 @tool
 def find_and_click_tool(element_description: str) -> str:
