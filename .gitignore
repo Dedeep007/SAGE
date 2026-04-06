@@ -4,3 +4,4 @@
 .env
 __pycache__/
 current_screenshot.png
+test.log
